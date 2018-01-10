@@ -4,7 +4,7 @@
   "description": "A json server which provide fake photos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir build"
   },
   "repository": {
     "type": "git",
@@ -23,13 +23,16 @@
   "homepage": "https://github.com/crusoexia/fake-photos#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "jest": "^22.0.4"
   },
   "dependencies": {
+    "command-line-args": "^4.0.7",
     "faker": "^4.1.0",
-    "json-server": "^0.12.1"
+    "json-server": "^0.12.1",
+    "lodash": "^4.17.4"
   }
 }
