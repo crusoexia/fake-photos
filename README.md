@@ -1,5 +1,5 @@
 # fake-photos
-An fake json server which provide fake photos
+A fake json server which provide fake photos
 
 # Usage
 
