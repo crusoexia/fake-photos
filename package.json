@@ -1,9 +1,11 @@
 {
   "name": "fake-photos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A json server which provide fake photos",
   "bin": "./bin/fake-photos.js",
-  "files": [ "./build" ],
+  "files": [
+    "./build"
+  ],
   "scripts": {
     "build": "babel src --out-dir build",
     "release": "npm version",
