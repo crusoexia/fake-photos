@@ -31,7 +31,7 @@ var run = exports.run = function run() {
   server.use(middleware);
   server.use(router);
   server.listen(port, function () {
-    console.log('photo service is running'); // eslint-disable-line no-console
+    console.log('photo service is running on port:', port); // eslint-disable-line no-console
   });
 };
 
