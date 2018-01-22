@@ -1,6 +1,12 @@
 # fake-photos
 A fake json server which provide fake photos
 
+# Install
+
+```sh
+npm install -D fake-photos
+```
+
 # Usage
 
 ```sh
