@@ -2,9 +2,13 @@
   "name": "fake-photos",
   "version": "1.0.0",
   "description": "A json server which provide fake photos",
-  "main": "index.js",
+  "bin": "./bin/fake-photos.js",
+  "files": [ "./build" ],
   "scripts": {
-    "build": "babel src --out-dir build"
+    "build": "babel src --out-dir build",
+    "release": "npm version",
+    "prerelease": "git pull && npm run build && git add . && git commit -m \"build project for release\" | echo",
+    "postrelease": "git push origin master && git push --tags"
   },
   "repository": {
     "type": "git",
