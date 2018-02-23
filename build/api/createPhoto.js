@@ -8,6 +8,10 @@ var _faker = require('faker');
 
 var _faker2 = _interopRequireDefault(_faker);
 
+var _uniqueId = require('lodash/uniqueId');
+
+var _uniqueId2 = _interopRequireDefault(_uniqueId);
+
 var _times = require('lodash/times');
 
 var _times2 = _interopRequireDefault(_times);
@@ -16,10 +20,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function () {
   return {
+    id: [(0, _uniqueId2.default)(), _faker2.default.random.number()].join('-'),
     title: _faker2.default.lorem.sentence(),
     link: _faker2.default.internet.url(),
     media: {
-      m: _faker2.default.image.imageUrl()
+      m: _faker2.default.image.imageUrl() + '?_=' + (0, _uniqueId2.default)()
     },
     date_taken: _faker2.default.date.past(),
     description: '<p>' + _faker2.default.lorem.paragraph() + '</p>',

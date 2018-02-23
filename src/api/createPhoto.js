@@ -7,7 +7,7 @@ export default () => ({
   title: faker.lorem.sentence(),
   link: faker.internet.url(),
   media: {
-    m: [faker.image.imageUrl(), uniqueId()].join('?'),
+    m: `${faker.image.imageUrl()}?_=${uniqueId()}`,
   },
   date_taken: faker.date.past(),
   description: `<p>${faker.lorem.paragraph()}</p>`,
