@@ -1,11 +1,13 @@
 import faker from 'faker';
+import uniqueId from 'lodash/uniqueId';
 import times from 'lodash/times';
 
 export default () => ({
+  id: [uniqueId(), faker.random.number()].join('-'),
   title: faker.lorem.sentence(),
   link: faker.internet.url(),
   media: {
-    m: faker.image.imageUrl(),
+    m: [faker.image.imageUrl(), uniqueId()].join('?'),
   },
   date_taken: faker.date.past(),
   description: `<p>${faker.lorem.paragraph()}</p>`,
