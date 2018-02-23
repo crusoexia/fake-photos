@@ -1,6 +1,6 @@
 {
   "name": "fake-photos",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A json server which provide fake photos",
   "bin": "./bin/fake-photos.js",
   "files": [
