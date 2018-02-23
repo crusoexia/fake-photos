@@ -18,13 +18,17 @@ var _times2 = _interopRequireDefault(_times);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function isException() {
+  return Math.random() < 0.1;
+}
+
 exports.default = function () {
   return {
     id: [(0, _uniqueId2.default)(), _faker2.default.random.number()].join('-'),
     title: _faker2.default.lorem.sentence(),
     link: _faker2.default.internet.url(),
-    media: {
-      m: _faker2.default.image.imageUrl() + '?_=' + (0, _uniqueId2.default)()
+    media: isException() ? undefined : {
+      m: isException() ? undefined : _faker2.default.image.imageUrl() + '?_=' + (0, _uniqueId2.default)()
     },
     date_taken: _faker2.default.date.past(),
     description: '<p>' + _faker2.default.lorem.paragraph() + '</p>',
